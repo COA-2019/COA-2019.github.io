@@ -165,20 +165,27 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><p>第一次作业是让大家练习一下数的不同表示之间的转换</p>
-<p>由于数的表示形式比较多，为了避免任意两种表示形式之间转换产生的冗余工作，<br>我们约定了一个中间表示形式{@code}，大家要完成的作业是：</p>
+                <h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><p>第一次作业是让大家练习一下数的不同表示之间的转换。</p>
+<p>我们约定了一个中间表示形式{@code}来表示数在计算机中的存储，{@code}将被用于后续作业中的计算。<br>大家要完成的作业是：</p>
 <ol>
-<li>将数据类型{@Data}转换成中间表示{@code}，此工作可以在TransformerFactory.java中完成</li>
-<li>将中间表示{@code}转换成表示形式{@Data}，此工作可以在Transformer.java中完成</li>
+<li>十进制整数和二进制补码之间的互转。</li>
+<li>十进制整数和8421BCD码之间的互转。</li>
+<li>十进制浮点数和IEEE-754二进制表示之间的互转。</li>
 </ol>
 <h1 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h1><blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; /**</span><br><span class="line">&gt;  * calculate the Binary Code from possible data-presentation</span><br><span class="line">&gt;  * If raw data-type is Integer, the Binary Code should be a Two-Complement Code</span><br><span class="line">&gt;  * Else if raw data-type is Float, the Binary Code should be a True-Value Presentation(not True-Complement Binary Code)</span><br><span class="line">&gt;  *   of the float(with 8-bits length exponents and 23-bits length fraction)</span><br><span class="line">&gt;  **/</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <ol>
-<li>对于整数：<br>{@code}表示二进制补码<br>{@Data}表示{BCD, 十进制数, 原码, 反码, 补码, 真值表示}中的任意一种</li>
-<li>对于小数部分不为0的浮点数：<br>{@code}表示浮点数二进制真值表示<br>{@Data}表示{十进制数, 真值表示}中的任意一种</li>
+<li>将原始数据类型转换成中间表示{@code}，此工作可以在TransformerFactory.java中完成。</li>
+<li>将中间表示{@code}转换成目标表示形式，此工作可以在Transformer.java中完成。</li>
+<li></li>
 </ol>
-<h1 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h1><p>在完成作业的过程中，有以下要求：<br>①同学们可以任意增加新的类、方法和变量，但请不要随意修改已有的接口，以免导致后续测试出现问题<br>②如果作业过程中认为有不合理或错误之处，如果问题不严重，请在不违反要求①的情况下自行修改，无需向老师或助教反馈，本作业的最主要目的还是为了加深同学们对课堂内容的理解<br>③(Optional)请尽量保持目录结构的整洁，并不要轻易删除自己之前作业的本地代码。此项不是必须，但是可能会对大家后续作业的完成有所帮助</p>
+<h1 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h1><p>在完成作业的过程中，有以下要求：</p>
+<ol>
+<li>同学们可以任意增加新的类、方法和变量，但请不要随意修改已有的接口，以免导致后续测试出现问题。</li>
+<li>如果作业过程中认为有不合理或错误之处，如果问题不严重，请在不违反要求①的情况下自行修改，无需向老师或助教反馈，本作业的最主要目的还是为了加深同学们对课堂内容的理解。</li>
+<li>(Optional)请尽量保持目录结构的整洁，并不要轻易删除自己之前作业的本地代码。此项不是必须，但是可能会对大家后续作业的完成有所帮助</li>
+</ol>
 
 
                 <hr>
