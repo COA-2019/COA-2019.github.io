@@ -172,6 +172,7 @@
 <li>十进制整数和8421BCD码之间的互转。</li>
 <li>十进制浮点数和IEEE-754二进制表示(只要求32位单精度表示)之间的互转。</li>
 </ol>
+<p>{@code}在具体代码中指代{@link Transformer#code}变量，在语义上表示数字在计算机内的二进制存储形式，可以是整数的二进制补码，也可以是浮点数的IEEE 754表示。由于作业中包含BCD码表示，所以{@code}也可以是BCD二进制码</p>
 <h1 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h1><blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; /**</span><br><span class="line">&gt;  * calculate the Binary Code from possible data-presentation</span><br><span class="line">&gt;  * If raw data-type is Integer, the Binary Code should be a Two-Complement Code</span><br><span class="line">&gt;  * Else if raw data-type is Float, the Binary Code should be a True-Value Presentation(not True-Complement Binary Code)</span><br><span class="line">&gt;  *   of the float(with 8-bits length exponents and 23-bits length fraction)</span><br><span class="line">&gt;  **/</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
