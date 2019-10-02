@@ -168,6 +168,7 @@ layout: layout
                 <% }%>
 
                 <!-- Short About -->
+                <% if(config['sidebar']) { %>
                 <section class="visible-md visible-lg">
                     <hr><h5><a href="<%= config.root %>about/">ABOUT ME</a></h5>
                     <div class="short-about">
@@ -260,6 +261,7 @@ layout: layout
                         </ul>
                     </div>
                 </section>
+                <% } %>
                 
                 <!-- Friends Blog -->
                 <% if(config.friends) { %>

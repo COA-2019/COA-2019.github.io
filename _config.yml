@@ -3,20 +3,30 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: COA 2019
 subtitle:
-description:
-keywords:
-author: John Doe
+author: COA
 language: en
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://github.com/COA-2019/COA-2019.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+
+#Custom Setting Start
+
+# Site settings
+SEOTitle: COA 2019
+header-img: img/header.png
+email: 
+description: ""
+keyword: ""
+
+# Siderbar settings
+siderbar: false
 
 # Directory
 source_dir: source
