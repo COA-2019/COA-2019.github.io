@@ -13,11 +13,11 @@
 
     <title>
         
-          COA 2019
+          第五次作业 - COA 2019
         
     </title>
 
-    <link rel="canonical" href="https://github.com/COA-2019/COA-2019.github.io/">
+    <link rel="canonical" href="https://github.com/COA-2019/COA-2019.github.io/2019/11/02/第五次作业/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -123,276 +123,99 @@
 
 
     <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/header.png')">
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://github.com/COA-2019/COA-2019.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/header.png')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>COA 2019</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading"></span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>第五次作业</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by COA on
+                        2019-11-02
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
-
-<!-- USE SIDEBAR -->
     <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <!-- Main Content -->
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>1.<br>在Cache类中实现fetch方法将数据从内存读到Cache(如果还没有加载到Cache)<br>并返回被更新的Cache行的行号(需要调用不同的映射策略和替换策略)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">fetch</span><span class="params">(String sAddr, <span class="keyword">int</span> len)</span></span>&#123;</span><br></pre></td></tr></table></figure>
+
+<p>2.<br>实现三种映射策略(直接映射、全关联映射、组关联映射)和三种替换策略(先进先出、最少使用、最近使用)</p>
 
 
-<div class="post-preview">
+                <hr>
 
-    <a href="/2019/11/02/第五次作业/">
-        <h2 class="post-title">
-            第五次作业
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            1.在Cache类中实现fetch方法将数据从内存读到Cache(如果还没有加载到Cache)并返回被更新的Cache行的行号(需要调用不同的映射策略和替换策略)
-1String fetch(String sAddr, int len)&#123;
+                
 
-2.实现三种映射策略(直接映射、全关联映射、组关联映射)和三种替换策略(先进先出、最少使用、最近使用)
-...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-11-02
-    </p>
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/11/02/第四次作业/" data-toggle="tooltip" data-placement="top" title="第四次作业">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
 
-</div>
-<hr>
+                
 
-<div class="post-preview">
-
-    <a href="/2019/11/02/第四次作业/">
-        <h2 class="post-title">
-            第四次作业
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            在ALU类中实现整数的二进制除法 operand1 ÷ operand2输入为32位二进制补码，输出为65位0-1字符串(1位溢出(溢出则置为1) + 32位商 + 32位余数)注意：除数为0，且被除数不为0时要求能够正确抛出ArithmeticException异常特殊值可以使用BinaryIntegers.java中定义的值
-1String div(String src, String ......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-11-02
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2019/10/17/第三次作业/">
-        <h2 class="post-title">
-            第三次作业
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            在ALU类中实现整数的二进制乘法(要求使用布斯乘法实现)输入和输出均为32位二进制补码，计算结果直接截取低32位作为最终输出
-1String mul(String src, String dest)
-
-
-在FPU类中实现浮点数的二进制乘法输入和输出均为32位IEEE-754标准的单精度二进制数，分数部分(23 bits)的计算结果直接截取前23位
-1String mul(String a, ......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-10-17
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2019/10/11/感谢以下同学的贡献/">
-        <h2 class="post-title">
-            感谢以下同学的贡献
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            2019-10-26 14:55：181250068 李淳，发现programming02中重复调用impleDigits的代码冗余以及ALU和FPU中加法器的实现代码冗余，指出programming03中查表法判断特殊情况的时间复杂度缺陷
-2019-10-18 16:08：181250169 薛宗耀，提供了programming02中的serialCarryAdder加法器实现和conne......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-10-11
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2019/10/10/第二次作业/">
-        <h2 class="post-title">
-            第二次作业
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            在ALU类中实现12个方法(别担心，绝大部分都很简单)，具体如下注意，所有参数和返回值都是32位的二进制数，其中除了位移运算的src参数为无符号数，其余参数均为有符号的整数补码
-1.计算两个32位二进制整数补码真值的和
-1String add(String src, String sub)
-
-2.计算两个32位二进制整数补码真值的差，dest表示被减数，src表示减数(即计算dest - s......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-10-10
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2019/10/02/作业答案/">
-        <h2 class="post-title">
-            作业答案
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            编程作业的答案持续更新在github上。
-https://github.com/COA-2019/programming-answer
-...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-10-02
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2019/09/26/第一次作业/">
-        <h2 class="post-title">
-            第一次作业
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            在Transformer类中实现6个方法，具体如下
-
-1public String intToBinary(String numStr)
-
-
-
-将整数字面值（十进制表示）转化成补码表示的二进制，默认长度32位
-2.
-1public String binaryToInt(String binStr)
-
-将补码表示的二进制转化成整数字面值（十进制表示）
-3.
-1public String flo......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-09-26
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2019/09/08/课程说明/">
-        <h2 class="post-title">
-            课程说明
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            COA 2019 课程说明
- “让我们改变一下对构建程序的态度：不要把我们的主要工作想象为教计算机怎么做，相反，让我们集中精力向人们解释我们想让机器做什么。”– Donald Knuth 现代计算机鼻祖，《计算机程序设计艺术》作者
-
-大家好，首先欢迎大家开始计算机组成原理的学习，这将是一段奇幻而又充实的经历。理解计算机的工作原理和机制，硬件之间的协调配合，设计上的权衡让步，窥见机箱内的各个部......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-09-08
-    </p>
-
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-
-                <!-- 如果开启评论功能 -->
                 
 
             </div>
+    <!-- Side Catalog Container -->
+        
+
     <!-- Sidebar Container -->
+
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
                 <!-- Featured Tags -->
                 
 
-                <!-- Short About -->
-                
-                
                 <!-- Friends Blog -->
                 
             </div>
-        
+
+        </div>
     </div>
-</div>
+</article>
+
+
+
+
+
+
+
 
 
     <!-- Footer -->
