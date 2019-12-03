@@ -13,11 +13,11 @@
 
     <title>
         
-          第五次作业说明 - COA 2019
+          第六次作业 - COA 2019
         
     </title>
 
-    <link rel="canonical" href="https://github.com/COA-2019/COA-2019.github.io/2019/11/03/第五次作业说明/">
+    <link rel="canonical" href="https://github.com/COA-2019/COA-2019.github.io/2019/12/03/第六次作业/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -142,11 +142,11 @@
                     <div class="tags">
                         
                     </div>
-                    <h1>第五次作业说明</h1>
+                    <h1>第六次作业</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by COA on
-                        2019-11-03
+                        2019-12-03
                     </span>
                 </div>
             </div>
@@ -165,7 +165,48 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>programming05的提交时间以Moodle为准(11.9-11.12)</p>
+                <h2 id="COA2019"><a href="#COA2019" class="headerlink" title="COA2019"></a>COA2019</h2><p>请参考 MMU.java 和 Memory.java 的类注释，实现三种内存管理模式下的<strong>地址转换</strong>和<strong>存储管理</strong>：</p>
+<ul>
+<li>实模式</li>
+<li>分段</li>
+<li>段页式</li>
+</ul>
+<h4 id="组织逻辑"><a href="#组织逻辑" class="headerlink" title="组织逻辑"></a>组织逻辑</h4><p>MMU（Memory Management Unit）为本次作业的数据访问接口，其数据流为：</p>
+<ol>
+<li>测试用例调用MMU#read()方法使用逻辑地址访问数据</li>
+<li>MMU 根据 Memory 的管理策略将逻辑地址转换成 Memory 的物理地址</li>
+<li>MMU 调用 Memory#load() 确保待读数据一定在内存中<br>3.1 数据未加载到 Memory，访问 Disk<br>3.2 将 Disk 中的数据加载到 Memory</li>
+<li>MMU 调用 Memory#read()从内存读取数据</li>
+<li>返回数据给测试用例</li>
+</ol>
+<h5 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h5><ul>
+<li>访问 Memory 时需要判断数据是否已被加载到 Memory ，如果没有加载需要从Disk读取数据</li>
+<li><strong>写操作不做要求</strong>，能正确读取数据即可，Disk.java初始化时会在项目根目录下生成一个128M的预先写好数据的磁盘文件，测试用例的执行不会修改磁盘数据(或者修改后恢复)</li>
+<li>段表和页表的数据结构需要自己实现，建议也实现一个反向页表</li>
+</ul>
+<h5 id="补充-磁盘寻址"><a href="#补充-磁盘寻址" class="headerlink" title="补充-磁盘寻址"></a>补充-磁盘寻址</h5><p>考虑到一些同学对存储管理相关知识不太清楚，作业中对真实的存储管理模型进行了一定程度的简化，特别是<strong>磁盘的寻址方式</strong>，这里进行补充说明：</p>
+<ol>
+<li><p>实模式情况</p>
+<p>由于磁盘的寻址较为复杂，涉及到磁道扇区等事项，本次作业不考虑这些东西，直接约定实模式下<strong>磁盘的物理地址等于内存的物理地址</strong>。</p>
+<p>这种情况下，磁盘的寻址空间等于内存的寻址空间，也就是内存实际上只能读取磁盘的前 32M 数据，但考虑到真实情况下实模式其实只有20-bits的1M寻址空间，这种方式是可以接受的</p>
+</li>
+<li><p>分段情况</p>
+<p>分段开启之后，本作业约定：</p>
+<ol>
+<li><strong>段描述符增加一个特殊字段</strong>用于描述段在磁盘的物理存储基址(需要与段在内存的物理存储基址区分)</li>
+<li>段在磁盘中是连续存储的，且一旦初始化，其磁盘基址和限长就被固定不会发生变化(内存基址可能改变)</li>
+</ol>
+</li>
+<li><p>段页式情况</p>
+<p>段页式下段表不需要使用段描述符中磁盘基址字段，磁盘的全部 128M 空间都是可以访问的。这是因为分页机制的引入实际上同时引入了虚存的概念，并且我们规定：</p>
+<ol>
+<li>虚存大小等于磁盘大小，虚存地址空间等于磁盘地址空间(实际情况下虚存大小会远大于内存空间，并且远小于磁盘空间)</li>
+<li>在虚存空间等于磁盘空间的情况下，可以将两者进行一个直接映射，即虚存物理地址等于磁盘物理地址</li>
+<li>段页式下，<strong>虚存物理地址=虚页号x页面大小+偏移量=磁盘物理地址</strong></li>
+</ol>
+</li>
+</ol>
+<h4 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h4><p>从磁盘文件读取数据很慢，平台运行测试用例的总时间有限制(1min)，请尽可能减少磁盘读取操作<br>部分分段用例需要加载整段数据，运行时间会比较长：<br>SegTest.test2（≈10s）<br>SegTest.test3（≈15s）<br>SegTest.test4（≈10s）</p>
 
 
                 <hr>
@@ -175,12 +216,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2019/12/03/第六次作业/" data-toggle="tooltip" data-placement="top" title="第六次作业">&larr; Previous Post</a>
+                            <a href="/2019/12/03/第七次作业/" data-toggle="tooltip" data-placement="top" title="第七次作业">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2019/11/02/第五次作业/" data-toggle="tooltip" data-placement="top" title="第五次作业">Next Post &rarr;</a>
+                            <a href="/2019/11/03/第五次作业说明/" data-toggle="tooltip" data-placement="top" title="第五次作业说明">Next Post &rarr;</a>
                         </li>
                     
                 </ul>

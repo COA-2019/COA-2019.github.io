@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          第七次作业 - COA 2019
+        
+    </title>
+
+    <link rel="canonical" href="https://github.com/COA-2019/COA-2019.github.io/2019/12/03/第七次作业/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">COA 2019</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://github.com/COA-2019/COA-2019.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/header.png')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>第七次作业</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by COA on
+                        2019-12-03
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="作业目标"><a href="#作业目标" class="headerlink" title="作业目标"></a>作业目标</h2><p>能够正确解析和执行单条指令</p>
+<h2 id="具体要求"><a href="#具体要求" class="headerlink" title="具体要求"></a>具体要求</h2><p>实现以下opcode对应的指令的解析和执行:</p>
+<ol>
+<li>opcode=0x05 ADD eAX,Iv</li>
+<li>opcode=0x0D OR eAX,Iv</li>
+<li>opcode=0x15 ADC eAX,Iv</li>
+<li>opcode=0x1D SBB eAX,Iv</li>
+<li>opcode=0x25 AND eAX,Iv</li>
+<li>opcode=0x2D SUB eAX,Iv</li>
+<li>opcode=0x35 XOR eAX,Iv</li>
+<li>opcode=0x3D CMP eAX,Iv</li>
+<li>opcode=0x58 POP eAX</li>
+<li>opcode=0x59 POP eCX</li>
+<li>opcode=0x5a POP eDX</li>
+<li>opcode=0x53 PUSH eBX</li>
+<li>opcode=0x74 JZ Jb</li>
+<li>opcode=0xb8 MOV eAX,Iv</li>
+</ol>
+<h2 id="编写汇编指令"><a href="#编写汇编指令" class="headerlink" title="编写汇编指令"></a>编写汇编指令</h2><p>机器如何运行程序？</p>
+<p>程序装载入内存之后 , 就是由一条又一条称为指令的 01 串所构成的序列。 CPU 能够解读这些由 01 串编码好的指令并将其转换成对应的操作，这时候留给CPU的任务就是不断地进行指令的读取、译码、执行。</p>
+<p>现在需要实现的目的, 就是能够先把程序装载到内存中去, 并且让CPU进行指令读取</p>
+<p>注：所有指令执行均需要按照 intel i386规范,具体参见如下。此文档已经被放在代码根目录下。</p>
+<p><a href="https://css.csail.mit.edu/6.858/2014/readings/i386.pdf" target="_blank" rel="noopener">https://css.csail.mit.edu/6.858/2014/readings/i386.pdf</a></p>
+<h2 id="指令结构"><a href="#指令结构" class="headerlink" title="指令结构"></a>指令结构</h2><p>一条指令主要包含如下两部分内容</p>
+<ol>
+<li>指令操作码 (<em>opcode</em>) , 指明了这一条指令的行为</li>
+<li>指令操作数 (<em>operand</em>) , 对于涉及到数据的指令, 我们需要给出操作对象. 操作数来源可以是立即数(<em>immediate</em>) , 寄存器编号 (<em>register</em>) , 或者是一个内存地址 (<em>mem_addr</em>)</li>
+</ol>
+<p>IA-32体系结构中 , 指令结构如下</p>
+<p><img src="https://i.loli.net/2019/11/20/9m62wS8yGZCEKIf.png" alt></p>
+<ol>
+<li>前缀(<em>prefix</em>)，考虑到作业难度，本次作业不使用前缀，也就是所有指令都从opcode开始。4种前缀和opcode的值域均是相互之间独立的，这样计算机才能够正确对指令进行解析。前缀包含了一部分指令信息，比如操作码前缀(<em>oprand-size prefix</em>)如果是0x66，则操作数长度为16位，该前缀如果为空则操作数长度是默认的32位</li>
+<li><em>ModR/M</em> , <em>SIB</em> , <em>displacement</em> 码 , 这三个域通过组合方式, 来决定最终的操作数寻址方式</li>
+<li><em>immediate</em> 为指令可能用到的立即数</li>
+</ol>
+<p>CPU执行指令分为如下几步</p>
+<ol>
+<li>根据当前cs段寄存器中的段选择符和 <em>eip*寄存器的值, 组合成48-bits的逻辑地址访问内存，取指令 *instr</em></li>
+<li>译码。根据 <em>instr</em> 中的 <em>opcode</em> 查表获取指令类型和长度，并且根据需要解析 <em>ModR/M</em> , <em>SIB</em> , <em>displacement</em> 码。此时已经知晓的信息是{ <strong>操作类型，操作数寻址方式，地址(如果有)，立即数(如果有)，该条指令长度</strong>}</li>
+<li>根据指令译码结果 , 进行相应的指令执行。执行完毕之后根据指令长度，更新 <em>eip</em> , 如果还有接下来的一条指令，就返回到1步骤, 否则运行结束</li>
+</ol>
+<p>友情提示：如果发生指令跳转，跳转指令返回的长度应该是0</p>
+<h2 id="框架代码执行流"><a href="#框架代码执行流" class="headerlink" title="框架代码执行流"></a>框架代码执行流</h2><ul>
+<li>由于本次作业只要求能够对单条指令进行译码，测试用例会将一条指令写入磁盘起始处，并初始化eip的值为0，并在内存中初始化段表，为这个只有一条指令的程序分配一个段</li>
+<li>CPU循环读取1个字节，直到发现某个字节为opcode</li>
+<li>InstrFactory根据opcode查询instr.all_instrs.Opcode.java中的表格，构建对应的指令类(需要自己在all_instrs包下创建，实现Instruction接口，类名首字母大写，其余字母小写)</li>
+<li>CPU调用指令类的exec接口，指令类根据自身的opcode确定指令长度(注意同一条指令可能对应多个opcode，指令长度和字段含义也有所不同)，调用mmu.read读取指令的剩余部分并执行</li>
+<li>指令类执行完毕需要返回执行的指令长度(字节)</li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li>CPU.execInstr(number)是测试用例使用到的接口，要求连续执行number条指令。本次作业中number恒定为1</li>
+<li>CPU.execInstr()会从eip寄存器中读取下一条指令的地址，传给CPU.decodeAndExecute(eip)</li>
+<li>CPU.decodeAndExecute(eip)会从内存中取出下一条可执行的指令的opcode，创建对应的指令类并要求执行</li>
+<li>CPU_State维护了一个所有寄存器的列表，注意段寄存器只有16位，其他寄存器都是32位的</li>
+<li>由于esp是向低地址压栈，我们在Memory中增加了一个HashMap用于模拟栈结构，并提供了对应的接口，push和pop可能会使用到。当然你们也可以用自己更喜欢的数据结构替换这个简陋的栈。</li>
+</ol>
+<p>完整opcode在<a href="https://github.com/CaribouW/pa2018/blob/master/nemu/src/cpu/instr/decode/opcode.c">https://github.com/CaribouW/pa2018/blob/master/nemu/src/cpu/instr/decode/opcode.c</a><br>或者参考目录下的”英特尔80386程序员参考手册(i386)intel.pdf”的414页的单字节opcode表<br>或者参考目录下opcode.jpg</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">int</span> <span class="params">(*instr_func)</span><span class="params">(<span class="keyword">uint32_t</span> eip, <span class="keyword">uint8_t</span> opcode)</span></span>;</span><br><span class="line"></span><br><span class="line">instr_func opcode_entry[<span class="number">256</span>] = &#123;</span><br><span class="line"><span class="comment">/* 0x00 - 0x03*/</span>	add_r2rm_b, add_r2rm_v, add_rm2r_b, add_rm2r_v,</span><br><span class="line"><span class="comment">/* 0x04 - 0x07*/</span>	add_i2a_b, add_i2a_v, inv, inv,</span><br><span class="line"><span class="comment">/* 0x08 - 0x0b*/</span>	or_r2rm_b, or_r2rm_v, or_rm2r_b, or_rm2r_v,</span><br><span class="line"><span class="comment">/* 0x0c - 0x0f*/</span>	or_i2a_b, or_i2a_v, inv, opcode_2_byte,</span><br><span class="line"><span class="comment">/* 0x10 - 0x13*/</span>	adc_r2rm_b, adc_r2rm_v, adc_rm2r_b, adc_rm2r_v,</span><br><span class="line"><span class="comment">/* 0x14 - 0x17*/</span>	adc_i2a_b, adc_i2a_v, inv, inv,</span><br><span class="line"><span class="comment">/* 0x18 - 0x1b*/</span>	sbb_r2rm_b, sbb_r2rm_v, sbb_rm2r_b, sbb_rm2r_v,</span><br><span class="line"><span class="comment">/* 0x1c - 0x1f*/</span>	sbb_i2a_b, sbb_i2a_v, inv, inv,</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考代码和资料"><a href="#参考代码和资料" class="headerlink" title="参考代码和资料"></a>参考代码和资料</h2><hr>
+<ol>
+<li>计科PA2019大作业文档中关于指令集部分的说明<br><a href="https://nju-projectn.github.io/ics-pa-gitbook/ics2019/i386-intro.html" target="_blank" rel="noopener">https://nju-projectn.github.io/ics-pa-gitbook/ics2019/i386-intro.html</a></li>
+<li>关于如何理解opcode表格各字段含义<br><a href="https://css.csail.mit.edu/6.858/2014/readings/i386/appa.htm" target="_blank" rel="noopener">https://css.csail.mit.edu/6.858/2014/readings/i386/appa.htm</a><br>这里也可以直接阅读”英特尔80386程序员参考手册(i386)intel.pdf”</li>
+<li>我们提供了一份完整基于c的参考代码，但是具体实现和代码架构有所不同<br><a href="https://github.com/CaribouW/pa2018/tree/master">https://github.com/CaribouW/pa2018/tree/master</a></li>
+</ol>
+<p>这里举一个指令实现的例子</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">make_instr_func(imul_rm2r_v)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> len = <span class="number">1</span>;</span><br><span class="line">	OPERAND r, rm;</span><br><span class="line">	r.data_size = data_size;</span><br><span class="line">	rm.data_size = data_size;</span><br><span class="line">	len += modrm_r_rm(eip + <span class="number">1</span>, &amp;r, &amp;rm);</span><br><span class="line">	operand_read(&amp;r);</span><br><span class="line">	operand_read(&amp;rm);</span><br><span class="line">	r.val = alu_imul(sign_ext(rm.val, data_size), sign_ext(r.val, data_size), data_size);</span><br><span class="line">	operand_write(&amp;r);</span><br><span class="line"></span><br><span class="line">	print_asm_2(<span class="string">"imul"</span>, <span class="string">"b"</span>, len, &amp;rm, &amp;r);</span><br><span class="line">	<span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>imul_rm2_r_v</code> 这里是通过一个宏替换(make_instr_func)形成函数指针 + <code>opcode_entry</code>表驱动的, 执行的行为是 <strong>有符号整数乘法, 操作数分别是一个内存取值和一个寄存器取值, 乘法结果放回到寄存器中</strong></p>
+<p>我们通过 <code>modrm_r_rm(eip + 1, &amp;r, &amp;rm);</code> 做了两件事</p>
+<ol>
+<li>获取整个指令的长度并且返回</li>
+<li>将操作数的地址放到 <code>r , rm</code> 中</li>
+</ol>
+<p>然后我们进行操作数的值的读取</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">operand_read(&amp;r);</span><br><span class="line">operand_read(&amp;rm);</span><br></pre></td></tr></table></figure>
+
+<p>并且利用之前实现好的 <code>alu_imul</code> 来进行计算. 并且通过 <code>operand_write</code> 进行结果写回，最终返回整个指令的长度, 便于读取下一条指令的信息</p>
+<p>所有的指令都已经实现在了 <a href="https://github.com/CaribouW/pa2018/tree/master/nemu/src/cpu/instr">https://github.com/CaribouW/pa2018/tree/master/nemu/src/cpu/instr</a> 下，不知道怎么实现的同学可以参考以上代码</p>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/12/03/第六次作业/" data-toggle="tooltip" data-placement="top" title="第六次作业">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; COA 2019
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <span id="busuanzi_container_site_uv">
+                          访客数<span id="busuanzi_value_site_uv"></span>人次
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://github.com/COA-2019/COA-2019.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="https://github.com/COA-2019/COA-2019.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
