@@ -13,11 +13,11 @@
 
     <title>
         
-          COA 2019
+          第八次作业 - COA 2019
         
     </title>
 
-    <link rel="canonical" href="https://github.com/COA-2019/COA-2019.github.io/page/2/">
+    <link rel="canonical" href="https://github.com/COA-2019/COA-2019.github.io/2019/12/11/第八次作业/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -123,137 +123,109 @@
 
 
     <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/header.png')">
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://github.com/COA-2019/COA-2019.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/header.png')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>COA 2019</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading"></span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>第八次作业</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by COA on
+                        2019-12-11
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
-
-<!-- USE SIDEBAR -->
     <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <!-- Main Content -->
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="作业目标"><a href="#作业目标" class="headerlink" title="作业目标"></a>作业目标</h2><p>实现指令控制状态机ICC</p>
+<h2 id="具体要求"><a href="#具体要求" class="headerlink" title="具体要求"></a>具体要求</h2><p>上一次作业只要求能够解析和执行单条指令，本次作业要求能够执行一连串的指令</p>
+<p>为此需要实现：</p>
+<ol>
+<li>实现 <em>opcode=0xf4 hlt</em> 指令</li>
+<li>在上一次作业的基础上实现ICC状态机，允许对代码进行重构</li>
+</ol>
+<p>在CPU中，指令的执行流一般是由ICC进行控制，如图所示，其中不需要考虑ICC=0b11的中断分支：<br><img src="https://s2.ax1x.com/2019/12/12/Q6GeEt.png" alt></p>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><ol>
+<li>ICC状态机会不断重复获取、解析、执行指令，直到执行到hlt指令为止(实际上hlt是关机指令，为了避免实现复杂的中断(ICC=0b11)，本作业简单地将hlt指定为指令终止指令)</li>
+<li>我们不限定具体的实现方式，你可以使用一个最简单的while循环，也可以考虑状态设计模式，或者一个专门的控制器类。</li>
+<li>上一次作业的考试结束时间延长为12-13 23:59，因此本次作业的框架与上次作业相同，测试用例有区别，但不会包含上次作业的答案。</li>
+<li>你们会发现什么都不用写也能过两个用例，但是这并没什么用。顺便回复部分嫌弃用例简单的邮件：考虑到作业本身存在一定难度，用例也是公开的，因此我们在平时作业不会设计很复杂的测试用例(除了机考)，只是覆盖一些常规情况，也很少刻意检查一些中间状态(除了机考)</li>
+</ol>
 
 
-<div class="post-preview">
+                <hr>
 
-    <a href="/2019/09/26/第一次作业/">
-        <h2 class="post-title">
-            第一次作业
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            在Transformer类中实现6个方法，具体如下
+                
 
-1public String intToBinary(String numStr)
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/12/03/第七次作业/" data-toggle="tooltip" data-placement="top" title="第七次作业">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
 
+                
 
-
-将整数字面值（十进制表示）转化成补码表示的二进制，默认长度32位
-2.
-1public String binaryToInt(String binStr)
-
-将补码表示的二进制转化成整数字面值（十进制表示）
-3.
-1public String flo......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-09-26
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2019/09/08/课程说明/">
-        <h2 class="post-title">
-            课程说明
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            COA 2019 课程说明
- “让我们改变一下对构建程序的态度：不要把我们的主要工作想象为教计算机怎么做，相反，让我们集中精力向人们解释我们想让机器做什么。”– Donald Knuth 现代计算机鼻祖，《计算机程序设计艺术》作者
-
-大家好，首先欢迎大家开始计算机组成原理的学习，这将是一段奇幻而又充实的经历。理解计算机的工作原理和机制，硬件之间的协调配合，设计上的权衡让步，窥见机箱内的各个部......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by COA on
-        2019-09-08
-    </p>
-
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-        <li class="previous">
-            <a href="/">&larr; Newer Posts</a>
-        </li>
-    
-    
-</ul>
-
-
-
-                <!-- 如果开启评论功能 -->
                 
 
             </div>
+    <!-- Side Catalog Container -->
+        
+
     <!-- Sidebar Container -->
+
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
                 <!-- Featured Tags -->
                 
 
-                <!-- Short About -->
-                
-                
                 <!-- Friends Blog -->
                 
             </div>
-        
+
+        </div>
     </div>
-</div>
+</article>
+
+
+
+
+
+
+
 
 
     <!-- Footer -->
